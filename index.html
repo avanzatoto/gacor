@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVANZATOTO: Situs Game Online Resmi Terbaik dan Terpercaya</title>
+    
+    <!-- FAVICON (Favorite Icon) -->
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <!-- META OG (Open Graph) UNTUK PREVIEW SOSIAL MEDIA -->
+    <meta property="og:title" content="AVANZATOTO: Situs Game Online Resmi Terbaik dan Terpercaya">
+    <meta property="og:description" content="Masuk dan daftar di AVANZATOTO, platform game online resmi dengan keamanan data tingkat tinggi dan layanan premium 24 jam.">
+    <meta property="og:image" content="preview.jpg">
+    <meta property="og:url" content="https://avanzatoto.github.io/avanzahoki/">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- GLOBAL STYLE & DESIGN VARIABLES --- */
+        :root {
+            --dark-bg: #020305;
+            --gold-shine-gradient: linear-gradient(120deg, #d4af37 30%, #fcf3d1 45%, #ffffff 50%, #fcf3d1 55%, #d4af37 70%);
+            --sub-shine-gradient: linear-gradient(120deg, #ffffff 30%, #f5d482 45%, #ffffff 50%, #f5d482 55%, #ffffff 70%);
+            
+            --gold-glow: 0 0 25px rgba(212, 175, 55, 0.55);
+            --gold-border: rgba(212, 175, 55, 0.25);
+            
+            --glass-bg: rgba(4, 6, 12, 0.35); 
+            --glass-card: rgba(3, 4, 8, 0.65);
+            
+            --text-light: #ffffff;
+            --text-gold: #f5d482;
+            --text-gray: #c0c5d1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            background-image: url('background.jpg'); 
+            background-repeat: repeat;
+            background-position: center top;
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(2, 3, 5, 0.65);
+            z-index: 1;
+        }
+
+        header, .container, .info-bar, footer {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            background: rgba(2, 3, 5, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .header-left p {
+            font-size: 11px;
+            color: var(--text-gray);
+            margin-top: 3px;
+        }
+
+        .header-left span {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-gold);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .support, .lang-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .support i {
+            color: var(--text-gold);
+            font-size: 16px;
+            animation: pulseSupport 2s infinite;
+        }
+
+        .lang-selector select {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--gold-border);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* --- MAIN LAYOUT CONTROLLER --- */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 280px 1fr 280px;
+            gap: 30px;
+            align-items: center;
+        }
+
+        /* --- SIDEBAR MENU --- */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .menu-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--gold-border);
+            border-radius: 12px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 243, 204, 0.2), transparent);
+            transition: 0.6s;
+        }
+
+        .menu-card:hover::before {
+            left: 100%;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-4px);
+            border-color: #fff3cc;
+            box-shadow: var(--gold-glow);
+            background: rgba(212, 175, 55, 0.15);
+        }
+
+        .menu-card i {
+            width: 35px;
+            height: 35px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-gold);
+            filter: drop-shadow(0 0 5px rgba(212,175,55,0.4));
+        }
+
+        .menu-text h4 {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .menu-text p {
+            font-size: 10px;
+            color: var(--text-gray);
+            margin-top: 3px;
+        }
+
+        /* --- CENTER AREA: BRAND LOGO LAYOUT CONTROLLER --- */
+        .center-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .brand-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-crown {
+            font-size: 45px;
+            color: var(--text-gold);
+            filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.6));
+            animation: float 3s ease-in-out infinite;
+            margin-bottom: 5px;
+        }
+
+        .brand-title {
+            font-size: 44px;
+            font-weight: 800;
+            letter-spacing: 6px;
+            background: var(--gold-shine-gradient);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            width: 100%;
+            animation: shineLightEffect 3s linear infinite;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.45));
+        }
+
+        .marquee-wrapper {
+            overflow: hidden;
+            width: 100%;
+            max-width: 320px; 
+            margin-top: 8px;
+            display: flex;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
+        }
+
+        .marquee-content {
+            display: flex;
+            white-space: nowrap;
+            width: max-content; 
+            gap: 40px; 
+            padding-right: 40px; 
+            animation: continuousLoop 10s linear infinite;
+        }
+
+        .marquee-item {
+            font-size: 13px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: var(--sub-shine-gradient);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shineLightEffect 4s linear infinite;
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
+            flex-shrink: 0;
+        }
+
+        /* ==================================================== */
+        /* --- WRAPPER BINGKAI ANIMASI UNTUK KOTAK LOGIN --- */
+        /* ==================================================== */
+        .login-card-wrapper {
+            width: 100%;
+            max-width: 440px;
+            /* Bingkai Animasi Emas */
+            background: var(--gold-shine-gradient);
+            background-size: 200% auto;
+            animation: shineLightEffect 3s linear infinite;
+            
+            border-radius: 26px; /* Lebih besar dari kotak dalam untuk efek bingkai */
+            padding: 2px; /* Angka ini menentukan KETEBALAN bingkai (2px) */
+            
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), var(--gold-glow);
+        }
+
+        /* --- KOTAK LOGIN BAGIAN DALAM (FOTO) --- */
+        .login-card {
+            width: 100%;
+            height: 100%;
+            background-color: #0b0c10; 
+            background-image: url('bg-popup.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden; 
+            
+            border-radius: 24px; /* Sudut disesuaikan dengan wrapper luar */
+            padding: 40px 35px;
+            text-align: center;
+        }
+
+        .login-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--text-gold);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            position: relative; 
+            z-index: 2;
+        }
+
+        .login-card p.subtitle {
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-top: 6px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .login-card form, .login-card p.register-hint {
+            position: relative; 
+            z-index: 2;
+        }
+
+        .form-help {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .forgot-link {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .forgot-link:hover {
+            color: var(--text-gold);
+            text-shadow: 0 0 8px rgba(212,175,55,0.4);
+        }
+
+        /* Login Button */
+        .btn-login {
+            width: 100%;
+            padding: 16px;
+            background: var(--gold-shine-gradient);
+            background-size: 200% auto;
+            border: none;
+            border-radius: 10px;
+            color: #000;
+            font-weight: 800;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-transform: uppercase;
+            box-shadow: var(--gold-glow);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: shineLightEffect 3s linear infinite;
+        }
+
+        .btn-login:hover {
+            transform: scale(1.03);
+            filter: brightness(1.2);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.8);
+        }
+
+        .register-hint {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-top: 25px;
+        }
+
+        .register-hint a {
+            color: var(--text-gold);
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+        }
+        
+        .register-hint a:hover {
+            color: #fff;
+            text-shadow: 0 0 8px rgba(255,255,255,0.6);
+        }
+
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: rgba(212, 175, 55, 0.04);
+            border: 1px solid var(--gold-border);
+            border-radius: 50px;
+            max-width: 950px;
+            width: calc(100% - 40px);
+            margin: 35px auto;
+            padding: 18px 35px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 12px;
+        }
+
+        .info-item i {
+            font-size: 20px;
+            color: var(--text-gold);
+        }
+
+        .info-item strong {
+            display: block;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-item span {
+            color: var(--text-gray);
+        }
+
+        /* --- FOOTER LAYOUT --- */
+        footer {
+            background: rgba(2, 3, 5, 0.7);
+            padding: 30px 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .bank-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .bank-logo {
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: var(--text-gray);
+            filter: grayscale(20%);
+            transition: 0.3s;
+        }
+        
+        .bank-logo:hover {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .bank-logo.bca { color: #005caa; }
+        .bank-logo.bni { color: #f15a24; }
+        .bank-logo.bri { color: #00a4e4; }
+        .bank-logo.mandiri { color: #ffc20e; }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            color: var(--text-gray);
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .social-media a:hover {
+            color: var(--text-gold);
+            transform: translateY(-3px);
+        }
+
+        /* ========================================================== */
+        /* --- HIGH LEVEL EFFECT ANIMATIONS --- */
+        /* ========================================================== */
+        
+        @keyframes continuousLoop {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes shineLightEffect {
+            0% { background-position: -100% center; }
+            100% { background-position: 100% center; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes pulseSupport {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        /* --- CRISP RESPONSIVE MOBILE OPTIMIZATION --- */
+        @media (max-width: 1024px) {
+            header {
+                padding: 15px 20px;
+            }
+            
+            .header-right .support span {
+                display: none;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 15px;
+            }
+
+            .center-area {
+                grid-row: 1; 
+            }
+
+            .sidebar {
+                flex-direction: row;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                padding: 10px 5px;
+                gap: 12px;
+                width: 100vw;
+                margin-left: -15px; 
+                padding-left: 20px;
+                padding-right: 20px;
+                scrollbar-width: none; 
+            }
+            
+            .sidebar::-webkit-scrollbar {
+                display: none; 
+            }
+
+            .menu-card {
+                flex: 0 0 210px; 
+                scroll-snap-align: start;
+                padding: 14px 16px;
+            }
+
+            .info-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                border-radius: 16px;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-title {
+                font-size: 34px;
+                letter-spacing: 4px;
+            }
+            /* Menyesuaikan padding saat di layar HP */
+            .login-card {
+                padding: 30px 20px;
+            }
+            .bank-logos {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER LAYOUT -->
+    <header>
+        <div class="header-left">
+            <span>Selamat Datang Kembali,</span>
+            <p>Silakan login untuk melanjutkan</p>
+        </div>
+        <div class="header-right">
+            <a href="https://avanzalancar.com/support" class="support" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-headset"></i>
+                <span>LIVE SUPPORT (24/7)</span>
+            </a>
+            <div class="lang-selector">
+                <select>
+                    <option>INDONESIA</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTAINER UTAMA -->
+    <div class="container">
+        
+        <!-- SIDEBAR KIRI: FITUR UMUM -->
+        <div class="sidebar">
+            <a href="https://d88ke78jve.avanza189.com/register" class="menu-card">
+                <i class="fas fa-user-plus"></i>
+                <div class="menu-text">
+                    <h4>Daftar</h4>
+                    <p>Buat Akun Baru</p>
+                </div>
+            </a>
+            <a href="https://d88ke78jve.avanza189.com/promotion" class="menu-card">
+                <i class="fas fa-gift"></i>
+                <div class="menu-text">
+                    <h4>Promo</h4>
+                    <p>Promo & Bonus Menarik</p>
+                </div>
+            </a>
+            <a href="https://secure.livechatenterprise.com/licence/19083506/v2/open_chat.cgi" class="menu-card">
+                <i class="fas fa-comments"></i>
+                <div class="menu-text">
+                    <h4>Live Chat</h4>
+                    <p>Customer Service 24 Jam</p>
+                </div>
+            </a>
+            <a href="https://d88ke78jve.avanza189.com/rules-game" class="menu-card">
+                <i class="fas fa-book-open"></i>
+                <div class="menu-text">
+                    <h4>Panduan</h4>
+                    <p>Cara Bermain Lengkap</p>
+                </div>
+            </a>
+            <a href="https://hokishj.com/avanzatoto.apk" class="menu-card">
+                <i class="fas fa-download"></i>
+                <div class="menu-text">
+                    <h4>Download App</h4>
+                    <p>Aplikasi Mobile APK</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- AREA TENGAH: BRAND LOGO + TEXT LOOP CONTINUOUS -->
+        <div class="center-area">
+            <div class="brand-logo">
+                <div class="logo-crown"><i class="fas fa-crown"></i></div>
+                <h1 class="brand-title">AVANZATOTO</h1>
+                
+                <div class="marquee-wrapper">
+                    <div class="marquee-content">
+                        <span class="marquee-item">FAIR PLAY, BIG WINS, ALL THE TIME, LIMITLESS</span>
+                        <span class="marquee-item">FAIR PLAY, BIG WINS, ALL THE TIME, LIMITLESS</span>
+                        <span class="marquee-item">FAIR PLAY, BIG WINS, ALL THE TIME, LIMITLESS</span>
+                        <span class="marquee-item">FAIR PLAY, BIG WINS, ALL THE TIME, LIMITLESS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PEMBUNGKUS BARU UNTUK BINGKAI ANIMASI -->
+            <div class="login-card-wrapper">
+                <div class="login-card">
+                    <h3>Login Member</h3>
+                    <p class="subtitle">Masukkan akun Anda untuk melanjutkan</p>
+
+                    <form action="#">
+                        <div class="form-help">
+                            <a href="https://vn34964kst.avanza189.com/forgot/password" class="forgot-link">Lupa Password?</a>
+                        </div>
+
+                        <a href="https://vn34964kst.avanza189.com/" class="btn-login">
+                            <i class="fas fa-unlock-alt"></i> Login Sekarang
+                        </a>
+                    </form>
+
+                    <p class="register-hint">Belum punya akun? <a href="https://d88ke78jve.avanza189.com/register">DAFTAR SEKARANG</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIDEBAR KANAN: KATEGORI LAYANAN / GAME -->
+        <div class="sidebar">
+            <a href="https://vn34964kst.avanza189.com/history/number" class="menu-card">
+                <i class="fas fa-chart-line"></i>
+                <div class="menu-text">
+                    <h4>History Nomor</h4>
+                    <p>Lihat Angka Pengeluaran</p>
+                </div>
+            </a>
+            <a href="https://vn34964kst.avanza189.com/dream-book" class="menu-card">
+                <i class="fas fa-book"></i>
+                <div class="menu-text">
+                    <h4>Buku Mimpi</h4>
+                    <p>Cari Tau Arti Mimpi</p>
+                </div>
+            </a>
+            <a href="https://vn34964kst.avanza189.com/referral" class="menu-card">
+                <i class="fas fa-users"></i>
+                <div class="menu-text">
+                    <h4>Referral</h4>
+                    <p>Bonus Referral Seumur Hidup</p>
+                </div>
+            </a>
+            <a href="https://vn34964kst.avanza189.com/news/1615" class="menu-card">
+                <i class="fas fa-chart-bar"></i>
+                <div class="menu-text">
+                    <h4>Info Pasaran</h4>
+                    <p>Jadwal Tutup & Result </p>
+                </div>
+            </a>
+            <a href="https://vn34964kst.avanza189.com/news/1616" class="menu-card">
+                <i class="fas fa-university"></i>
+                <div class="menu-text">
+                    <h4>Jadwal Bank</h4>
+                    <p>Tersedia Berbagai Bank</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- INFO LAYANAN -->
+    <div class="info-bar">
+        <div class="info-item">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+                <strong>100% Aman</strong>
+                <span>Data Terenkripsi</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-bolt"></i>
+            <div>
+                <strong>Transaksi Instan</strong>
+                <span>Proses Cepat & Mudah</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-headset"></i>
+            <div>
+                <strong>24/7 Support</strong>
+                <span>Layanan Profesional</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER LAYOUT -->
+    <footer>
+        <div class="bank-logos">
+            <span class="bank-logo bca">BCA</span>
+            <span class="bank-logo bni">BNI</span>
+            <span class="bank-logo bri">BRI</span>
+            <span class="bank-logo mandiri">MANDIRI</span>
+            <span class="bank-logo" style="color: #00a4e4;">CIMB</span>
+            <span class="bank-logo" style="color: #12316C;">DANA</span>
+            <span class="bank-logo" style="color: #4C2680;">OVO</span>
+            <span class="bank-logo" style="color: #00AED6;">GOPAY</span>
+        </div>
+        <div class="footer-text">
+            <p style="font-size: 11px; color: var(--text-gray);">&copy; 2026 Avanzatoto Big Group. All Rights Reserved.</p>
+        </div>
+        <div class="social-media">
+            <a href="https://LINK_WEBSITE_ANDA_DISINI"><i class="fab fa-facebook"></i></a>
+            <a href="https://LINK_WEBSITE_ANDA_DISINI"><i class="fab fa-instagram"></i></a>
+            <a href="https://LINK_WEBSITE_ANDA_DISINI"><i class="fab fa-telegram"></i></a>
+            <a href="https://LINK_WEBSITE_ANDA_DISINI"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
