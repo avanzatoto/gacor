@@ -99,58 +99,122 @@
             z-index: 2;
         }
 
-        /* --- HEADER --- */
+        /* --- HEADER BARU --- */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
+            padding: 15px 5%;
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-            background: rgba(2, 3, 5, 0.5);
+            background: rgba(0, 0, 0, 0.85); /* Hitam solid sesuai gambar */
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
 
-        .header-left p {
-            font-size: 11px;
-            color: var(--text-gray);
-            margin-top: 3px;
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
-        .header-left span {
-            font-size: 14px;
+        .welcome-icon i {
+            font-size: 24px;
+            color: var(--text-gold);
+            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));
+        }
+
+        .welcome-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .welcome-text .title {
+            font-size: 15px;
             font-weight: 600;
             color: var(--text-gold);
+            letter-spacing: 0.5px;
+        }
+
+        .welcome-text p {
+            font-size: 11px;
+            color: var(--text-gray);
+            margin-top: 2px;
         }
 
         .header-right {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 15px;
         }
 
-        .support, .lang-selector {
+        .support-pill, .lang-pill {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 12px;
-            font-weight: 500;
+            gap: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 50px;
+            padding: 8px 20px;
+            background: #050505;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none !important;
         }
 
-        .support i {
+        .support-pill:hover, .lang-pill:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: rgba(212, 175, 55, 0.8);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .support-icon {
             color: var(--text-gold);
-            font-size: 16px;
+            font-size: 18px;
             animation: pulseSupport 2s infinite;
         }
 
-        .lang-selector select {
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid var(--gold-border);
-            color: #fff;
-            padding: 6px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            outline: none;
+        .support-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .support-title {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .support-sub {
+            color: var(--text-gray);
+            font-size: 10px;
+            margin-top: 2px;
+        }
+
+        .lang-pill {
+            padding: 8px 15px;
+        }
+
+        /* Mengunci ukuran bendera agar tidak bocor */
+        .flag-icon {
+            width: 24px !important;
+            height: 16px !important;
+            min-width: 24px;
+            border-radius: 2px;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        .lang-pill span {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .lang-pill i {
+            color: #ffffff;
+            font-size: 10px;
+            margin-left: 5px;
         }
 
         /* --- MAIN LAYOUT CONTROLLER --- */
@@ -605,8 +669,16 @@
                 padding: 15px 20px;
             }
             
-            .header-right .support span {
+            /* Menyembunyikan teks di mobile agar tidak berantakan */
+            .header-right .support-text, 
+            .header-right .lang-pill span, 
+            .header-right .lang-pill .fa-chevron-down {
                 display: none;
+            }
+
+            .support-pill, .lang-pill {
+                padding: 8px 12px;
+                gap: 0;
             }
 
             .container {
@@ -698,7 +770,7 @@
 </head>
 <body>
 
-<!-- HEADER LAYOUT -->
+    <!-- HEADER LAYOUT BARU -->
     <header>
         <div class="header-left">
             <div class="welcome-icon">
@@ -710,7 +782,7 @@
             </div>
         </div>
         <div class="header-right">
-            <a href="https://avanzalancar.com/support" class="support-pill" style="text-decoration: none;">
+            <a href="https://avanzalancar.com/support" class="support-pill">
                 <i class="fas fa-headset support-icon"></i>
                 <div class="support-text">
                     <span class="support-title">LIVE SUPPORT</span>
@@ -718,7 +790,11 @@
                 </div>
             </a>
             <div class="lang-pill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg" alt="ID" class="flag-img">
+                <!-- SVG Murni untuk bendera, 100% Anti Bocor / Anti Membesar -->
+                <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="3" height="1" fill="#FF0000"/>
+                    <rect y="1" width="3" height="1" fill="#FFFFFF"/>
+                </svg>
                 <span>INDONESIA</span>
                 <i class="fas fa-chevron-down"></i>
             </div>
