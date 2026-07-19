@@ -14,18 +14,18 @@
     <!-- FAVICON (Favorite Icon) -->
     <link rel="icon" href="logo.png" type="image/png">
 
-    <!-- META OG (Open Graph) UNTUK PREVIEW SOSIAL MEDIA -->
+    <!-- META OG (Open Graph) UNTUK PREVIEW SOSIAL MEDIA (URL ABSOLUT) -->
     <meta property="og:title" content="AVANZATOTO: Situs Game Online Resmi Terbaik dan Terpercaya">
     <meta property="og:description" content="Masuk dan daftar di AVANZATOTO, platform game online resmi dengan keamanan data tingkat tinggi dan layanan premium 24 jam.">
-    <meta property="og:image" content="preview.jpg">
+    <meta property="og:image" content="https://avanzatoto.github.io/avanzahoki/preview.jpg">
     <meta property="og:url" content="https://avanzatoto.github.io/avanzahoki/">
     <meta property="og:type" content="website">
 
-    <!-- TWITTER CARD META TAGS -->
+    <!-- TWITTER CARD META TAGS FOR LARGE IMAGE PREVIEW -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AVANZATOTO: Situs Game Online Resmi Terbaik dan Terpercaya">
     <meta name="twitter:description" content="Masuk dan daftar di AVANZATOTO, platform game online resmi dengan keamanan data tingkat tinggi dan layanan premium 24 jam.">
-    <meta name="twitter:image" content="preview.jpg">
+    <meta name="twitter:image" content="https://avanzatoto.github.io/avanzahoki/preview.jpg">
 
     <!-- ORGANIZATION & WEBSITE SCHEMA JSON-LD FOR PREMIUM SEO -->
     <script type="application/ld+json">
@@ -79,7 +79,7 @@
             background-repeat: repeat;
             background-position: center top;
             background-attachment: fixed; /* Membuat background tetap stabil saat di-scroll */
-            background-size: 150px; /* MEMBUAT UKURAN GAMBAR LEBIH KECIL AGAR TERULANG LEBIH BANYAK (bisa diganti misal 100px atau 200px sesuai keinginan) */
+            background-size: 150px; /* Ukuran latar belakang diperkecil agar terlihat lebih banyak */
             color: var(--text-light);
             min-height: 100vh;
             display: flex;
@@ -101,14 +101,14 @@
             z-index: 2;
         }
 
-        /* --- HEADER BARU --- */
+        /* --- HEADER --- */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 5%;
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-            background: rgba(0, 0, 0, 0.85); /* Hitam solid sesuai gambar */
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
@@ -197,7 +197,6 @@
             padding: 8px 15px;
         }
 
-        /* Mengunci ukuran bendera agar tidak bocor */
         .flag-icon {
             width: 24px !important;
             height: 16px !important;
@@ -387,7 +386,7 @@
             margin: 0 auto;
         }
 
-        /* --- KOTAK LOGIN BAGIAN DALAM (FOTO) --- */
+        /* --- KOTAK LOGIN BAGIAN DALAM --- */
         .login-card {
             width: 100%;
             height: 100%;
@@ -665,13 +664,12 @@
             100% { opacity: 0.6; }
         }
 
-        /* --- CRISP RESPONSIVE MOBILE OPTIMIZATION --- */
+        /* --- RESPONSIVE MOBILE OPTIMIZATION --- */
         @media (max-width: 1024px) {
             header {
                 padding: 15px 20px;
             }
             
-            /* Menyembunyikan teks di mobile agar tidak berantakan */
             .header-right .support-text, 
             .header-right .lang-pill span, 
             .header-right .lang-pill .fa-chevron-down {
@@ -792,7 +790,6 @@
                 </div>
             </a>
             <div class="lang-pill">
-                <!-- SVG Murni untuk bendera, 100% Anti Bocor / Anti Membesar -->
                 <svg class="flag-icon" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
                     <rect width="3" height="1" fill="#FF0000"/>
                     <rect y="1" width="3" height="1" fill="#FFFFFF"/>
@@ -806,7 +803,7 @@
     <!-- CONTAINER UTAMA -->
     <div class="container">
         
-        <!-- SIDEBAR KIRI: FITUR UMUM -->
+        <!-- SIDEBAR KIRI -->
         <div class="sidebar">
             <a href="https://avanzalancar.com/register" class="menu-card">
                 <i class="fas fa-user-plus"></i>
@@ -845,7 +842,7 @@
             </a>
         </div>
 
-        <!-- AREA TENGAH: BRAND LOGO + TEXT LOOP CONTINUOUS -->
+        <!-- AREA TENGAH -->
         <div class="center-area">
             <div class="brand-logo">
                 <div class="logo-crown"><i class="fas fa-crown"></i></div>
@@ -861,7 +858,7 @@
                 </div>
             </div>
 
-            <!-- PEMBUNGKUS BARU UNTUK BINGKAI ANIMASI -->
+            <!-- KOTAK LOGIN -->
             <div class="login-card-wrapper">
                 <div class="login-card">
                     <h3>Login Member</h3>
@@ -882,7 +879,7 @@
             </div>
         </div>
 
-        <!-- SIDEBAR KANAN: KATEGORI LAYANAN / GAME -->
+        <!-- SIDEBAR KANAN -->
         <div class="sidebar">
             <a href="https://avanzalancar.com/history/number" class="menu-card">
                 <i class="fas fa-chart-line"></i>
@@ -948,7 +945,7 @@
         </div>
     </div>
 
-    <!-- PREMIUM SEO TEXT CONTENT SECTION (MANDATORY FOR SEARCH ENGINE RANKING) -->
+    <!-- PREMIUM SEO TEXT CONTENT SECTION -->
     <div class="seo-content-section">
         <h2>AVANZATOTO: Situs Game Online Resmi Terbaik & Terpercaya</h2>
         <p>Selamat datang di <strong>AVANZATOTO</strong>, platform hiburan game online resmi paling populer dan terpercaya di Indonesia. Kami hadir untuk memberikan pengalaman bermain terbaik dengan fasilitas premium kelas dunia yang dirancang khusus untuk kenyamanan Anda. Sebagai link alternatif pilihan utama para pemain profesional, kami menyajikan sistem fair play, server super cepat, serta jaminan keamanan data tingkat tinggi yang terenkripsi penuh sehingga data pribadi Anda selalu aman bersama kami.</p>
