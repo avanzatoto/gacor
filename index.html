@@ -75,11 +75,6 @@
 
         body {
             background-color: var(--dark-bg);
-            background-image: url('background.jpg'); 
-            background-repeat: repeat;
-            background-position: center top;
-            background-attachment: fixed; /* Membuat background tetap stabil saat di-scroll */
-            background-size: 150px; /* Ukuran latar belakang diperkecil agar terlihat lebih banyak */
             color: var(--text-light);
             min-height: 100vh;
             display: flex;
@@ -88,12 +83,33 @@
             position: relative;
         }
 
+        /* FIX BACKGROUND FIXED UNTUK IOS / SAFARI */
         body::before {
             content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('background.jpg');
+            background-repeat: repeat;
+            background-position: center top;
+            background-size: 150px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* OVERLAY GELAP DI ATAS BACKGROUND */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             background: rgba(2, 3, 5, 0.35);
             z-index: 1;
+            pointer-events: none;
         }
 
         header, .container, .info-bar, .seo-content-section, footer {
